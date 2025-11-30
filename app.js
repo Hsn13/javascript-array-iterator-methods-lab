@@ -101,8 +101,10 @@ born in the 1500's.
   the years 1500 and 1599.
 */
 
+let veryOldInventors = [];
+
 // Complete the exercise in the space below:
-const veryOldInventors = inventors.filter(function (oldInventors) {
+veryOldInventors = inventors.filter(function (oldInventors) {
   //console.log(oldInventors.year);
   if (oldInventors.year > "1499" && oldInventors.year < "1600") {
     return true;
