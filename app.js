@@ -209,16 +209,16 @@ from an array of inventor objects
 let inventorNamedAda = {};
 
 // Complete the exercise in the space below:
-inventorNamedAda = inventors.find(function(nameAda){
-  if(nameAda.first===`Ada`){
-    return true
+inventorNamedAda = inventors.find(function (nameAda) {
+  if (nameAda.first === `Ada`) {
+    return true;
   }
 });
 // Check your work:
-console.log('Exercise 4 my result: ', inventorNamedAda);
-console.log('Exercise 4 correct result: ', {
-  first: 'Ada',
-  last: 'Lovelace',
+console.log("Exercise 4 my result: ", inventorNamedAda);
+console.log("Exercise 4 correct result: ", {
+  first: "Ada",
+  last: "Lovelace",
   year: 1815,
   passed: 1852,
 });
@@ -239,54 +239,54 @@ let firstLast = [];
 
 // Complete the exercise in the space below:
 firstLast = people.map(function (fullName) {
-  const splittingName = fullName.split(", "); 
+  const splittingName = fullName.split(", ");
   const last = splittingName[0];
   const first = splittingName[1];
   return first + " " + last;
 });
 // Check your work:
-console.log('Exercise 5 my result: ', firstLast);
-console.log('Exercise 5 correct result: ', [
-  'Carl Becker',
-  'Samuel Beckett',
-  'Mick Beddoes',
-  'Henry Beecher',
-  'Ludwig Beethoven',
-  'Menachem Begin',
-  'Hilaire Belloc',
-  'Saul Bellow',
-  'Robert Benchley',
-  'Peter Benenson',
-  'David Ben-Gurion',
-  'Walter Benjamin',
-  'Tony Benn',
-  'Chester Bennington',
-  'Leana Benson',
-  'Silas Bent',
-  'Lloyd Bentsen',
-  'Ric Berger',
-  'Ingmar Bergman',
-  'Luciano Berio',
-  'Milton Berle',
-  'Irving Berlin',
-  'Eric Berne',
-  'Sandra Bernhard',
-  'Yogi Berra',
-  'Halle Berry',
-  'Wendell Berry',
-  'Erin Bethea',
-  'Aneurin Bevan',
-  'Ken Bevel',
-  'Joseph Biden',
-  'Ambrose Bierce',
-  'Steve Biko',
-  'Josh Billings',
-  'Frank Biondo',
-  'Augustine Birrell',
-  'Elk Black',
-  'Robert Blair',
-  'Tony Blair',
-  'William Blake',
+console.log("Exercise 5 my result: ", firstLast);
+console.log("Exercise 5 correct result: ", [
+  "Carl Becker",
+  "Samuel Beckett",
+  "Mick Beddoes",
+  "Henry Beecher",
+  "Ludwig Beethoven",
+  "Menachem Begin",
+  "Hilaire Belloc",
+  "Saul Bellow",
+  "Robert Benchley",
+  "Peter Benenson",
+  "David Ben-Gurion",
+  "Walter Benjamin",
+  "Tony Benn",
+  "Chester Bennington",
+  "Leana Benson",
+  "Silas Bent",
+  "Lloyd Bentsen",
+  "Ric Berger",
+  "Ingmar Bergman",
+  "Luciano Berio",
+  "Milton Berle",
+  "Irving Berlin",
+  "Eric Berne",
+  "Sandra Bernhard",
+  "Yogi Berra",
+  "Halle Berry",
+  "Wendell Berry",
+  "Erin Bethea",
+  "Aneurin Bevan",
+  "Ken Bevel",
+  "Joseph Biden",
+  "Ambrose Bierce",
+  "Steve Biko",
+  "Josh Billings",
+  "Frank Biondo",
+  "Augustine Birrell",
+  "Elk Black",
+  "Robert Blair",
+  "Tony Blair",
+  "William Blake",
 ]);
 
 /*
@@ -304,12 +304,38 @@ old or older.
 let isAdultPresent = null;
 
 // Complete the exercise in the space below:
-isAdultPresent = devs.some(function(check){
-  const ageTest = Number(2025-check.year)
-  if(ageTest => 18){
-    return true
+isAdultPresent = devs.some(function (check) {
+  const ageTest = Number(2025 - check.year);
+  if ((ageTest) >= 18) {
+    return true;
   }
 });
 // Check your work:
-console.log('Exercise 6 my result: ', isAdultPresent);
-console.log('Exercise 6 correct result: ', true);
+console.log("Exercise 6 my result: ", isAdultPresent);
+console.log("Exercise 6 correct result: ", true);
+
+/*
+Exercise 7: Array.prototype.every()
+
+Use Array.prototype.every() to determine if every person in the devs array is 
+19 years old or older.
+
+- You have an array of individuals, each with their year of birth represented
+  by the 'year' property.
+- Use the Array.prototype.every() method to verify if every individual in the
+  array is at least 19 years old.
+- Store the result (true or false) in the variable 'isEveryone19OrOlder'.
+*/
+
+let isEveryone19OrOlder = null;
+
+// Complete the exercise in the space below:
+isEveryone19OrOlder = devs.every(function (check) {
+  const ageTest = Number(2025 - check.year);
+  if (ageTest >= 19) {
+    return true;
+  }
+});
+// Check your work:
+console.log("Exercise 7 my result: ", isEveryone19OrOlder);
+console.log("Exercise 7 correct result: ", false);
